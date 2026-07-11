@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== CSS 变量 - 冷蓝工业风主题 ===== */
+:root {
+  --color-primary: #4a9eff;
+  --color-primary-light: #7ab7ff;
+  --color-primary-dark: #2a7fcf;
+  --color-bg: #0a0e17;
+  --color-bg-card: rgba(18, 26, 40, 0.7);
+  --color-border: rgba(74, 158, 255, 0.2);
+  --color-text: #e8edf5;
+  --color-text-secondary: #8899bb;
+}
+
+/* ===== 基础重置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== 等宽字体用于代码/数字 ===== */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ===== 自定义滚动条 ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ===== 网格背景（Hero 用） ===== */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(74, 158, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 158, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ===== 工业风斜线装饰 ===== */
+.slash-decoration::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 40%;
+  height: 160%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(74, 158, 255, 0.03) 20px,
+    rgba(74, 158, 255, 0.03) 21px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== 导航毛玻璃 ===== */
+.glass-nav {
+  background: rgba(10, 14, 23, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(74, 158, 255, 0.08);
+}
+
+/* ===== 卡片样式 ===== */
+.card-industrial {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+.card-industrial:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 30px rgba(74, 158, 255, 0.05);
+}
+
+/* ===== 强调色工具类 ===== */
+.text-primary {
+  color: var(--color-primary);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.hover\:bg-primary-dark:hover {
+  background-color: var(--color-primary-dark);
+}
+.hover\:border-primary:hover {
+  border-color: var(--color-primary);
+}
+
+/* ===== 滚动渐入动画 ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 流程箭头连接线 ===== */
+.connector-line {
+  width: 2px;
+  height: 32px;
+  background: linear-gradient(to bottom, var(--color-primary), transparent);
+  margin: 0 auto;
+  opacity: 0.4;
+}
