@@ -17,7 +17,7 @@ export interface PersonalInfo {
 }
 
 export const info: PersonalInfo = {
-  name: '张三',
+  name: '黄林浩',
   title: '制造数字化工程师',
   subtitle: ['SAP 主数据治理', 'MES 系统部署', '视觉检测算法', '工艺流程管理'],
   about:
@@ -40,7 +40,7 @@ export const info: PersonalInfo = {
     { name: '领英', url: 'https://linkedin.com', icon: 'Linkedin' },
     { name: '微信', url: '#', icon: 'MessageCircle' },
   ],
-  email: 'zhangsan@example.com',
+  email: '1669015564@qq.com',
   resumeUrl: '/resume.pdf',
-  footerText: '© 2026 张三 · 制造数字化工程师 · 构建于 Next.js + Tailwind',
+  footerText: '© 2026 黄林浩 · 制造数字化工程师 · 构建于 Next.js + Tailwind',
 };

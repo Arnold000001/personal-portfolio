@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '张三 · 制造数字化工程师',
+  title: '黄林浩 · 制造数字化工程师',
   description:
     '制造数字化工程师个人作品集 - SAP主数据治理、MES系统部署、视觉检测算法开发',
   icons: {

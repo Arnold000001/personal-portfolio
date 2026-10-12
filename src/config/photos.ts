@@ -37,7 +37,7 @@ export const photos: PhotosConfig = {
   honors: [
     {
       image: '/images/honors/honor1.jpg',
-      title: '施耐德优秀实施奖',
+      title: '施耐德优秀项目奖',
       year: '2025',
     },
     {
